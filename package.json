@@ -1,0 +1,22 @@
+{
+  "name": "weddingpicsmockapi",
+  "version": "1.0.0",
+  "description": "Mock API Data for the Wedding Pics Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thenoelman/weddingPicsMockApi.git"
+  },
+  "author": "Noel Yunginger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thenoelman/weddingPicsMockApi/issues"
+  },
+  "homepage": "https://github.com/thenoelman/weddingPicsMockApi#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
