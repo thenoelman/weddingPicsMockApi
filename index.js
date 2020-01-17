@@ -1,5 +1,14 @@
-const Person = require('./person');
+const express = require('express')
+const app = express()
+ 
+app.get('/', (req, res) => {
+  res.send('Hello World!!!');
+})
 
-const person1 = new Person('Your Mom', 88);
-
-person1.greeting();
+app.get('/whatever', (req, res) => {
+  res.send('whatever');
+})
+ 
+app.listen(3000, () => {
+    console.log('listening on port 3000...');
+});
