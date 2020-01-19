@@ -1,0 +1,16 @@
+{
+    "profile_photo":"https://www.rottmair.de/profiles/Sebastian_Rottmair.jpg",
+    "name_first":"Sebastian",
+    "name_last":"Rottson",
+    "email":"SebastianRottson@gmail.com",
+    "password_encrypted":"Ibq$t^vbqsa8",
+    "password_reset": false,
+    "events":[
+        {
+            "event_id":1,
+            "role":"groom",
+            "moderator":true
+        }
+    ]
+
+}

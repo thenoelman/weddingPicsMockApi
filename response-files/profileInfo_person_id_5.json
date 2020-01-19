@@ -1,0 +1,16 @@
+{
+    "profile_photo":"https://themify.me/demo/themes/pinshop/files/2012/12/man-in-suit2.jpg",
+    "name_first":"Hans",
+    "name_last":"Fosterberger",
+    "email":"HansFosterberger@gmail.com",
+    "password_encrypted":"^bOtgVySwRqa",
+    "password_reset": false,
+    "events":[
+        {
+            "event_id":1,
+            "role":"groom",
+            "moderator":true
+        }
+    ]
+
+}

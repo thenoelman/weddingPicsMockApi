@@ -182,6 +182,51 @@ app.get('/getPhotoHearts/:photoid', (req, res) => {
 
 //#endregion
 
+//#region Profile Info
+
+//http://localhost:3333/profile/<:person_id>
+//http://localhost:3333/profile/1
+app.get('/profile/:person_id', (req, res) => {
+  
+  if(req.params.person_id == "1")
+  {
+    let rawdata = fs.readFileSync('./response-files/profileInfo_person_id_1.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.person_id == "2")
+  {
+    let rawdata = fs.readFileSync('./response-files/profileInfo_person_id_2.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.person_id == "3")
+  {
+    let rawdata = fs.readFileSync('./response-files/profileInfo_person_id_3.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.person_id == "4")
+  {
+    let rawdata = fs.readFileSync('./response-files/profileInfo_person_id_4.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.person_id == "5")
+  {
+    let rawdata = fs.readFileSync('./response-files/profileInfo_person_id_5.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else
+  {
+    res.send({"ERROR":"Invalid Photo Id."});
+  }
+
+});
+
+//#endregion
+
 //ASSIGN PORT
 const port = process.env.PORT || 3333;
 app.listen(port, () => {

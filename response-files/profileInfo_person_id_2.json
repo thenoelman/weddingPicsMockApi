@@ -1,0 +1,16 @@
+{
+    "profile_photo":"https://www.mainewomensnetwork.com/Resources/Pictures/vicki%20aqua%20headshot-smallmwn.jpg",
+    "name_first":"Suzy",
+    "name_last":"Smith",
+    "email":"SuzySmith@gmail.com",
+    "password_encrypted":"Ju^jwOOma34M",
+    "password_reset": false,
+    "events":[
+        {
+            "event_id":1,
+            "role":"attendee",
+            "moderator":true
+        }
+    ]
+
+}

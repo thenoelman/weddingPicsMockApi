@@ -1,0 +1,16 @@
+{
+    "profile_photo":"https://vengreso.com/wp-content/uploads/2016/03/LinkedIn-Profile-Professional-Picture-Sample-Bernie-Borges.png",
+    "name_first":"John",
+    "name_last":"Doe",
+    "email":"JohnDoe@gmail.com",
+    "password_encrypted":"WOEIER&*$wedflk",
+    "password_reset": false,
+    "events":[
+        {
+            "event_id":1,
+            "role":"attendee",
+            "moderator":false
+        }
+    ]
+
+}
