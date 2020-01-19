@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const fs = require('fs');
  
 app.get('/', (req, res) => {
   res.send('Hello World!!!');
@@ -13,43 +14,6 @@ app.get('/whatever/:id', (req, res) => {
   res.send(req.params.id);
 });
 
-app.get('/test', (req, res) => {
-  var fs = require('fs');
-  fs.readFile( __dirname + '/response-files/test.json', function (err, data) {
-    if (err) {
-      throw err; 
-    }
-    console.log(data.toString());
-    res.send(data);
-  });
-  
-});
-
-app.get('/test2', (req, res) => {
-  res.send([1,2,3,]);
-  
-});
-
-app.get('/test3', (req, res) => {
-  testSTring = `[
-    {
-      "id": 1,
-      "title": "Nope",
-      "isDirty": true
-    },
-  {
-      "id": 2,
-      "title": "Yes",
-      "isDirty": false
-    }
-  ]`;
-  res.send(testSTring);
-})
-
-app.get('/test4', (req, res) => {
-  res.send([{"one": 1}]);
-})
-
 app.get('/test5', (req, res) => {
   res.send([{"one": 1}, {"two": 2}]);
 })
@@ -59,7 +23,13 @@ app.get('/test6', (req, res) => {
 })
 
 app.get('/test7', (req, res) => {
-  res.send({"thing": 88, "foo": 11, "bar": 3});
+  res.send({"thing": 88, "foo": 11, "bar": 3, "fooBar": {"number": 5, "object":{"key":"value"}}});
+})
+
+app.get('/test8', (req, res) => {
+  let rawdata = fs.readFileSync('./response-files/test2.json');
+  let whatever = JSON.parse(rawdata);
+  res.send(whatever);
 })
  
 //ASSIGN PORT
