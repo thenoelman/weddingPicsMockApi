@@ -31,9 +31,26 @@ app.get('/test8', (req, res) => {
   let whatever = JSON.parse(rawdata);
   res.send(whatever);
 })
+
+//http://localhost:3333/viewallphotos/<:eventid>
+//http://localhost:3333/viewallphotos/1
+app.get('/viewallphotos/:eventid', (req, res) => {
+  
+  if(req.params.eventid == "1")
+  {
+    let rawdata = fs.readFileSync('./response-files/eventPhotos.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else
+  {
+    res.send({"ERROR":"Invalid Event Id."});
+  }
+
+});
  
 //ASSIGN PORT
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3333;
 app.listen(port, () => {
     console.log(`listening on port ${port}...`);
 });
