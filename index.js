@@ -113,6 +113,75 @@ app.get('/getPhotoComments/:photoid', (req, res) => {
 
 //#endregion
  
+//#region Photo Hearts
+
+//http://localhost:3333/getPhotoHearts/<:photoid>
+//http://localhost:3333/getPhotoHearts/1
+app.get('/getPhotoHearts/:photoid', (req, res) => {
+  
+  if(req.params.photoid == "1")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoHearts_photo1.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "2")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoHearts_photo2.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "3")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoHearts_photo3.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "4")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoHearts_photo4.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "5")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoHearts_photo5.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "6")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoHearts_photo6.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "7")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoHearts_photo7.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "8")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoHearts_photo8.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "9")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoHearts_photo9.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else
+  {
+    res.send({"ERROR":"Invalid Photo Id."});
+  }
+
+});
+
+//#endregion
+
 //ASSIGN PORT
 const port = process.env.PORT || 3333;
 app.listen(port, () => {
