@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 
+//#region  View All Photos
+
 //http://localhost:3333/viewallphotos/<:eventid>
 //http://localhost:3333/viewallphotos/1
 app.get('/viewallphotos/:eventid', (req, res) => {
@@ -19,6 +21,10 @@ app.get('/viewallphotos/:eventid', (req, res) => {
 
 });
 
+//#endregion
+
+//#region Event Wall
+
 //http://localhost:3333/eventwall/<:eventid>
 //http://localhost:3333/eventwall/1
 app.get('/eventwall/:eventid', (req, res) => {
@@ -35,6 +41,10 @@ app.get('/eventwall/:eventid', (req, res) => {
   }
 
 });
+
+//#endregion
+
+//#region Photo Comments
 
 //http://localhost:3333/getPhotoComments/<:photoid>
 //http://localhost:3333/getPhotoComments/1
@@ -58,12 +68,50 @@ app.get('/getPhotoComments/:photoid', (req, res) => {
     let jsonData = JSON.parse(rawdata);
     res.send(jsonData);
   }
+  else if(req.params.photoid == "4")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoComments_photo4.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "5")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoComments_photo5.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "6")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoComments_photo6.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "7")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoComments_photo7.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "8")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoComments_photo8.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "9")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoComments_photo9.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
   else
   {
     res.send({"ERROR":"Invalid Photo Id."});
   }
 
 });
+
+//#endregion
  
 //ASSIGN PORT
 const port = process.env.PORT || 3333;
