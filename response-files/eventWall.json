@@ -1,7 +1,3 @@
 { 
-    "name": "Sara",
-    "age": 23,
-    "gender": "Female",
-    "department": "History",
-    "car": "Honda"
+    "bucket_id":"1234"
 }
