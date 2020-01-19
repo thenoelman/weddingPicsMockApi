@@ -227,6 +227,75 @@ app.get('/profile/:person_id', (req, res) => {
 
 //#endregion
 
+//#region Get Photo Details for Photo Component
+
+//http://localhost:3333/getPhotoDetails/<:photoid>
+//http://localhost:3333/getPhotoDetails/1
+app.get('/getPhotoDetails/:photoid', (req, res) => {
+  
+  if(req.params.photoid == "1")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoDetails_photo1.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "2")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoDetails_photo2.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "3")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoDetails_photo3.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "4")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoDetails_photo4.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "5")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoDetails_photo5.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "6")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoDetails_photo6.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "7")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoDetails_photo7.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "8")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoDetails_photo8.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else if(req.params.photoid == "9")
+  {
+    let rawdata = fs.readFileSync('./response-files/photoDetails_photo9.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else
+  {
+    res.send({"ERROR":"Invalid Photo Id."});
+  }
+
+});
+
+//#endregion
+
 //ASSIGN PORT
 const port = process.env.PORT || 3333;
 app.listen(port, () => {
