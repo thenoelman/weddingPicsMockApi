@@ -44,6 +44,25 @@ app.get('/eventwall/:eventid', (req, res) => {
 
 //#endregion
 
+//#region Event Wall Photos
+//http://localhost:3333/eventwallphotos/1
+app.get('/eventwallphotos/:eventid', (req, res) => {
+  
+  if(req.params.eventid == "1")
+  {
+    let rawdata = fs.readFileSync('./response-files/eventWallphotos.json');
+    let jsonData = JSON.parse(rawdata);
+    res.send(jsonData);
+  }
+  else
+  {
+    res.send({"ERROR":"Invalid Event Id."});
+  }
+
+});
+
+//#endregion
+
 //#region Photo Comments
 
 //http://localhost:3333/getPhotoComments/<:photoid>

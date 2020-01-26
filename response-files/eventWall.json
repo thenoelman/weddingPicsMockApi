@@ -1,4 +1,11 @@
 { 
     "event_id":1,
-    "bucket_id":"1234"
+    "bucket_id":"1234",
+    "event_name":"Bill and Bob's Wedding",
+    "address_one":"123 Main Street",
+    "address_two":null,
+    "city":"Portland",
+    "state":"OR",
+    "zip":97206,
+    "event_date":"02/14/2020"
 }
