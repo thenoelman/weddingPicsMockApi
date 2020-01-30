@@ -8,13 +8,17 @@
             "comments":[
                 {
                     "person_id": 1,
+                    "profile_photo":"https://vengreso.com/wp-content/uploads/2016/03/LinkedIn-Profile-Professional-Picture-Sample-Bernie-Borges.png",
                     "comment_id": 1,
-                    "comment_text": "Awesome!!"
+                    "comment_text": "Awesome!!",
+                    "time_stamp": "2020-01-20T18:25:43.511Z"
                 },
                 {
                     "person_id": 2,
+                    "profile_photo":"https://www.mainewomensnetwork.com/Resources/Pictures/vicki%20aqua%20headshot-smallmwn.jpg",
                     "comment_id": 2,
-                    "comment_text": "Great to see you guys!!"
+                    "comment_text": "Great to see you guys!!",
+                    "time_stamp": "2020-01-21T18:25:43.511Z"
                 }
             ],
             "hearts":{
@@ -28,13 +32,17 @@
             "comments":[
                 {
                     "person_id": 1,
+                    "profile_photo":"https://vengreso.com/wp-content/uploads/2016/03/LinkedIn-Profile-Professional-Picture-Sample-Bernie-Borges.png",
                     "comment_id": 3,
-                    "comment_text": "So happy for you!!"
+                    "comment_text": "So happy for you!!",
+                    "time_stamp": "2020-01-22T18:25:43.511Z"
                 },
                 {
                     "person_id": 2,
+                    "profile_photo":"https://www.mainewomensnetwork.com/Resources/Pictures/vicki%20aqua%20headshot-smallmwn.jpg",
                     "comment_id": 4,
-                    "comment_text": "I love weddings"
+                    "comment_text": "I love weddings",
+                    "time_stamp": "2020-01-24T18:25:43.511Z"
                 }
             ],
             "hearts":{"person_id": [1, 2]}
